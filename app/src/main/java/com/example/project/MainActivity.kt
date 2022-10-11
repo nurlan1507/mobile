@@ -1,15 +1,25 @@
 package com.example.project
 
-import android.annotation.SuppressLint
+import  android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
+import android.widget.Toast
 import android.widget.Toolbar
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var toolbar:androidx.appcompat.widget.Toolbar
+    lateinit var drawerLayout: DrawerLayout
+    lateinit var navView: NavigationView
+    lateinit var toggle: ActionBarDrawerToggle
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,10 +30,32 @@ class MainActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val button:Button = findViewById(R.id.btn)
-        button.setOnClickListener {
-            val intent = Intent(this, TimerActivity::class.java)
-            startActivity(intent)
+
+        drawerLayout = findViewById(R.id.drawerLayout)
+        navView = findViewById(R.id.navigation_view)
+        toggle = ActionBarDrawerToggle(this@MainActivity,drawerLayout, 0 ,0)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        navView.setNavigationItemSelectedListener {
+            when (it.itemId){
+                R.id.nav_home -> Toast.makeText(this, "home", Toast.LENGTH_SHORT).show()
+            }
+            true
         }
+
+//        val button:Button = findViewById(R.id.btn)
+//        button.setOnClickListener {
+//            val intent = Intent(this, TimerActivity::class.java)
+//            startActivity(intent)
+//        }
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)){
+            true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

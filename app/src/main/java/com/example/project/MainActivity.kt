@@ -1,18 +1,19 @@
 package com.example.project
 
-import  android.annotation.SuppressLint
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.project.models.main_grid.MainMenuItem
+import com.example.project.models.main_grid.Timer
 import com.google.android.material.navigation.NavigationView
-import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
     lateinit var toolbar:androidx.appcompat.widget.Toolbar
@@ -26,14 +27,14 @@ class MainActivity : AppCompatActivity() {
 
         val actionBar = supportActionBar
         actionBar?.hide()
-
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
 
+
         drawerLayout = findViewById(R.id.drawerLayout)
         navView = findViewById(R.id.navigation_view)
-        toggle = ActionBarDrawerToggle(this@MainActivity,drawerLayout, 0 ,0)
+        toggle = ActionBarDrawerToggle(this,drawerLayout, 0 ,0)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -43,6 +44,21 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+
+
+        //recyclerView
+        //init adapter and menu options
+
+        val menuOptions = ArrayList<MainMenuItem>()
+        menuOptions.add(MainMenuItem("Timer", Timer(this), R.drawable.clocl,this ))
+        val mainMenuAdapter = MainMenuAdapter(menuOptions)
+        val recyclerView:RecyclerView = findViewById(R.id.recyclerview_main_menu)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        recyclerView.adapter=mainMenuAdapter
+
+
+
 
 //        val button:Button = findViewById(R.id.btn)
 //        button.setOnClickListener {

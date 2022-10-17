@@ -5,14 +5,27 @@
       <map>
         <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable-anydpi/ic_action_theme.xml" value="0.193" />
         <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/background_fon.xml" value="0.1895" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/card_bg_color.xml" value="0.193" />
         <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/circular.xml" value="0.137" />
         <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.207" />
         <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.207" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.193" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/ic_baseline_rate_review_24.xml" value="0.193" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.193" />
         <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.137" />
         <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/image.xml" value="0.136" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/ripple_color.xml" value="0.193" />
         <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/drawable/smooth_border.xml" value="0.1895" />
-        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout/layout_main_grid_item.xml" value="0.264" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout-large/activity_main.xml" value="0.264" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout-large/layout_main_grid_item.xml" value="0.10389055151774262" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout-small/activity_main.xml" value="0.8" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout-small/layout_main_grid_item.xml" value="0.10303548525010689" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout-xlarge/activity_main.xml" value="0.1" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout-xlarge/layout_main_grid_item.xml" value="0.1" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout/activity_main_small.xml" value="0.12552083333333333" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout/activity_timer.xml" value="0.1" />
+        <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/layout/layout_main_grid_item.xml" value="0.1" />
         <entry key="..\:/kartoteka/android_studio_projects/project/app/src/main/res/menu/nav_menu.xml" value="0.264" />
       </map>
     </option>

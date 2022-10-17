@@ -10,9 +10,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.project.models.main_grid.MainMenuItem
-import com.example.project.models.main_grid.Profile
-import com.example.project.models.main_grid.Timer
+import com.example.project.models.main_grid.*
 import com.google.android.material.navigation.NavigationView
 import kotlin.collections.ArrayList
 
@@ -54,24 +52,16 @@ class MainActivity : AppCompatActivity() {
         val menuOptions = ArrayList<MainMenuItem>()
         menuOptions.add(MainMenuItem("Timer", Timer(this), R.drawable.clocl,this ))
         menuOptions.add(MainMenuItem("Profile", Profile(this), R.drawable.profile , this))
+        menuOptions.add(MainMenuItem("Team", Team(this), R.drawable.team, this))
+        menuOptions.add(MainMenuItem("Vacansies", Vacansies(this), R.drawable.vacansy , this))
 
         val mainMenuAdapter = MainMenuAdapter(menuOptions)
         val recyclerView:RecyclerView = findViewById(R.id.recyclerview_main_menu)
 
-
-        recyclerView.layoutManager = GridLayoutManagers(this)
+        var Grid = MainGridLayoutManager(this)
+        recyclerView.layoutManager = Grid
         recyclerView.adapter=mainMenuAdapter
 
-
-
-
-
-
-//        val button:Button = findViewById(R.id.btn)
-//        button.setOnClickListener {
-//            val intent = Intent(this, TimerActivity::class.java)
-//            startActivity(intent)
-//        }
 
     }
 

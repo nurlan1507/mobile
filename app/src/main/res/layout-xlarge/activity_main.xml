@@ -33,7 +33,8 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="650dp"
+            app:cardElevation="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -44,27 +45,28 @@
                 android:orientation="horizontal"
                 android:weightSum="1"
                 android:gravity="center"
-                android:layout_gravity="center"
+
                 >
-               <androidx.recyclerview.widget.RecyclerView
-                   android:id="@+id/recyclerview_main_menu"
-                   android:layout_width="0dp"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_main_menu"
                     android:layout_weight="0.8"
-                   android:layout_height="match_parent"
-                   tools:listitem="@layout/layout_main_grid_item"
-                   >
-               </androidx.recyclerview.widget.RecyclerView>
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/layout_main_grid_item"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!--        <Button-->
-<!--            android:id="@+id/btn"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="toTIMER"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/textView" />-->
+        <!--            android:id="@+id/btn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="toTIMER"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/textView" />-->
 
 
 

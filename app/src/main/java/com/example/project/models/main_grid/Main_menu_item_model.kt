@@ -11,7 +11,6 @@ class MainMenuItem(
     private var context: Context
 ){
     fun performAction(){
-
         itemAction.performAction()
     }
 }

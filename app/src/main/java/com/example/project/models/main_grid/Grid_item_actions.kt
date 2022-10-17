@@ -13,8 +13,20 @@ class Timer(val context: Context):ItemBehaviour{
 }
 class Profile(val context: Context):ItemBehaviour{
     override fun performAction() {
-        Toast.makeText(context, "PROFILE", Toast.LENGTH_SHORT)
-        return
+        Toast.makeText(context, "PROFILE", Toast.LENGTH_SHORT).show()
+
     }
 }
 
+class Team(val context: Context):ItemBehaviour{
+    override fun performAction() {
+        Toast.makeText(context, "TEAM", Toast.LENGTH_SHORT).show()
+
+    }
+}
+class Vacansies(val context: Context):ItemBehaviour{
+    override fun performAction() {
+        Toast.makeText(context,"VACANSIES" , Toast.LENGTH_SHORT).show()
+
+    }
+}

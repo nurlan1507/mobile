@@ -2,6 +2,7 @@ package com.example.project
 
 import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -27,12 +28,7 @@ class MainMenuAdapter(var options :ArrayList<MainMenuItem>):RecyclerView.Adapter
         with(holder.binding){
             mainMenuCardImage.setImageResource(options[position].img)
             mainMenuCardName.text = options[position].name
-            mainMenuCard.setOnClickListener{
-                if (mainMenuCard.cardBackgroundColor.defaultColor == -1){
-                    mainMenuCard.setBackgroundColor(Color.parseColor("#d3d3d3"))
-                }else{
-                    mainMenuCard.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
-                }
+            mainMenuCard.setOnClickListener(){
                 options[position].performAction()
             }
 

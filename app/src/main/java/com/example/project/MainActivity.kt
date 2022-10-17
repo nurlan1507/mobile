@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project.models.main_grid.MainMenuItem
+import com.example.project.models.main_grid.Profile
 import com.example.project.models.main_grid.Timer
 import com.google.android.material.navigation.NavigationView
 import kotlin.collections.ArrayList
@@ -52,10 +53,16 @@ class MainActivity : AppCompatActivity() {
 
         val menuOptions = ArrayList<MainMenuItem>()
         menuOptions.add(MainMenuItem("Timer", Timer(this), R.drawable.clocl,this ))
+        menuOptions.add(MainMenuItem("Profile", Profile(this), R.drawable.profile , this))
+
         val mainMenuAdapter = MainMenuAdapter(menuOptions)
         val recyclerView:RecyclerView = findViewById(R.id.recyclerview_main_menu)
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
+
+
+        recyclerView.layoutManager = GridLayoutManagers(this)
         recyclerView.adapter=mainMenuAdapter
+
+
 
 
 
